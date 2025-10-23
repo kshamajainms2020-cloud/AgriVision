@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide - Smart Crop Health System</title>
+  <style>
+    /* 🌱 Loader Style */
+    #loadingScreen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #f0fff4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      z-index: 9999;
+    }
+    .agri-loader {
+      font-size: 50px;
+      animation: grow 1s infinite alternate;
+    }
+    @keyframes grow {
+      from { transform: scale(0.8); opacity: 0.6; }
+      to { transform: scale(1.3); opacity: 1; }
+    }
+    #loadingScreen p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #2f855a;
+      font-weight: bold;
+    }
+
+    /* 🌿 Page Style */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #2d3748;
+    }
+    .guide-container {
+      max-width: 900px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .guide-container h1 {
+      text-align: center;
+      color: #2f855a;
+      margin-bottom: 20px;
+    }
+    .step {
+      background: #e6fffa;
+      border-left: 6px solid #2f855a;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    .step h2 {
+      margin: 0 0 10px 0;
+      color: #276749;
+    }
+    .tips {
+      background: #fefcbf;
+      padding: 15px;
+      margin-top: 30px;
+      border-radius: 10px;
+      border-left: 6px solid #d69e2e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌱 Loader -->
+  <div id="loadingScreen">
+    <div class="agri-loader">🌱</div>
+    <p>Loading Guide...</p>
+  </div>
+
+  <!-- 🌿 Guide Section -->
+  <div class="guide-container">
+    <h1>📖 User Guide</h1>
+
+    <div class="step">
+      <h2>Step 1: Upload Image</h2>
+      <p>Select a clear photo of the plant leaf. Make sure the image is focused and well-lit for best results.</p>
+    </div>
+
+    <div class="step">
+      <h2>Step 2: System Analysis</h2>
+      <p>Our AI-powered system will extract features such as color, shape, and texture to identify the crop disease.</p>
+    </div>
+
+    <div class="step">
+      <h2>Step 3: View Results</h2>
+      <p>The system will display the detected disease, growth stage, and suggested remedies.</p>
+    </div>
+
+    <div class="step">
+      <h2>Step 4: Take Action</h2>
+      <p>Follow the suggested remedies such as organic sprays, fertilizers, or watering adjustments.</p>
+    </div>
+
+    <div class="tips">
+      <h2>💡 Tips for Better Accuracy</h2>
+      <ul>
+        <li>Upload images in daylight or proper lighting.</li>
+        <li>Ensure the leaf is not blurred or covered by other leaves.</li>
+        <li>Try uploading multiple leaves for more reliable results.</li>
+        <li>Check the "Community" section to learn from other farmers’ experiences.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 🌱 Script -->
+  <script>
+    window.addEventListener("load", function(){
+      setTimeout(function(){
+        document.getElementById("loadingScreen").style.display = "none";
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>
